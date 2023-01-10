@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: firstopenAPI
+  description: firstAPI Description
+  version: 1.0.0
+  contact:
+    name: kunal
+    url: https://www.youtube.com
+    email: mailto:kunal@gmail.com
+
+
+paths:
+  /courses/{course_id}:
+    get:
+      description: to get detials of course
+      parameters:
+        - in : path
+          name: course_id
+          required: true
+          schema:
+            type: integer
+
+      responses:
+        '200':
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/course'
+          description: ok
+
+  /addCourses:
+    post:
+      description: to store courses
+      requestBody:
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/toaddcourse'
+        description: course uploaded sucessfully
+      responses:
+        '200':
+          description: upload sucessfull
+
+
+
+
+
+components:
+  schemas:
+    course:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        id:
+          type: integer
+
+
+
+    toaddcourse:
+      type: object
+      properties:
+        nameOfCourse:
+          type: string
+        aboutCourse:
+          type: string
+        course_id:
+          type: integer
+
+
+
+
+
