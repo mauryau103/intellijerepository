@@ -11,7 +11,7 @@ servers:
 paths:
   /users:
     get:
-      summary: Returns a list of users.
+      summary: Returns a list of users data.
       description: Optional extended description in CommonMark or HTML.
       responses:
         '200':    # status code
