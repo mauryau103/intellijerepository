@@ -14,7 +14,7 @@ public class Controller {
 
     @PostMapping("/student")
     public String createStudent(@RequestParam String name) {
-        studentRepository.save(new Student(name, "Santa Clara University"));
+        studentRepository.save(new Student(name, "Santa Clara University","thane","fifth"));
         String nameToReturn = studentRepository.findByName(name);
         return studentRepository.findByName(name) + " Saved successfully";
     }

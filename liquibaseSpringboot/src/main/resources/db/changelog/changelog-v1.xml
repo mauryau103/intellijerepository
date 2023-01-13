@@ -17,6 +17,7 @@
             <column name="level" type="varchar(255)" />
         </addColumn>
     </changeSet>
+
 <!--    <changeSet author="dickson-the-developer" id="6">-->
 <!--        <delete schemaName="liquibase"-->
 <!--                tableName="students">-->

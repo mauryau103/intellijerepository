@@ -35,6 +35,13 @@ public class Student {
         this.description = description;
     }
 
+    public Student(String name, String description, String address, String level) {
+        this.name = name;
+        this.description = description;
+        this.address = address;
+        this.level = level;
+    }
+
     public int getId() {
         return id;
     }
